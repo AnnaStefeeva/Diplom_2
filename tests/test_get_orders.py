@@ -5,7 +5,7 @@ import api
 
 @allure.suite('Тесты получения заказов')
 class TestCreateOrder:
-    @allure.title('Получения заказов с авторизацией')
+    @allure.title('Получение заказов с авторизацией')
     @allure.description('Авторизуем пользователя, получаем список заказов и проверяем статус 200 и тело ответа')
     def test_get_orders_with_auth(self, logged_in_user_credentials, valid_ingredient_hashes):
         token = logged_in_user_credentials['accessToken']

@@ -20,7 +20,7 @@ class TestUpdateUser:
         assert response.status_code == 200
         assert response.json()["success"] is True
 
-    @allure.title('Изменение данных пользователя без авторизацией')
+    @allure.title('Изменение данных пользователя без авторизации')
     @allure.description('Создаём пользователя, и меняем поле в пользовательских данных без авторизации')
     @pytest.mark.parametrize('field_to_update', ['email', 'password', 'name'])
     def test_update_user_without_auth(self, logged_in_user_credentials, field_to_update):
